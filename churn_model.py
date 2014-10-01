@@ -50,6 +50,8 @@ clf.fit(X[train_index],y[train_index])
 
 
 class ChurnModel(YhatModel):
+    REQUIREMENTS = ["sklearn==MY_CURRENT_VERSION"]
+    
     # Type casts incoming data as a dataframe
     @preprocess(in_type=pd.DataFrame,out_type=pd.DataFrame)
     def execute(self,data):
