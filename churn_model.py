@@ -50,7 +50,8 @@ clf.fit(X[train_index],y[train_index])
 
 
 class ChurnModel(YhatModel):
-    REQUIREMENTS = ["scikit-learn=MY_CURRENT_VERSION"]
+    # use pip freeze to see the current versions you're running
+    REQUIREMENTS = ["scikit-learn==MY_CURRENT_VERSION", "pandas==MY_CURRENT_VERSION"]
     
     # Type casts incoming data as a dataframe
     @preprocess(in_type=pd.DataFrame,out_type=pd.DataFrame)
